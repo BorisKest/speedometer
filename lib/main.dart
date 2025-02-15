@@ -1,59 +1,44 @@
-import 'dart:async';
-
-import 'package:flutter/material.dart';
-import 'package:sensors_plus/sensors_plus.dart';
+import 'package:speedometer/src/core/dependencies/data/initialization_hook.dart';
+import 'package:speedometer/src/core/dependencies/data/initialization_info.dart';
+import 'package:speedometer/src/core/dependencies/data/initialization_result.dart';
+import 'package:speedometer/src/core/utils/logger.dart';
+import 'package:speedometer/src/feature/app/data/app_runner.dart';
 
 void main() {
-  runApp(MaterialApp(home: const Speedometer()));
+  // debugRepaintRainbowEnabled = true;
+
+  final hook = InitializationHook.setUp(
+    onInitializing: _onInitializaing,
+    onInitialized: _onInitialized,
+    onError: _onError,
+    onInit: _onInit,
+  );
+  logger.runLogging(
+    () {
+      AppRunner().initializeAndRun(hook);
+    },
+    const LogOptions(),
+  );
 }
 
-class Speedometer extends StatefulWidget {
-  const Speedometer({Key? key}) : super(key: key);
-
-  @override
-  State<Speedometer> createState() => _SpeedometerState();
+void _onInitializaing(InitializationStepInfo info) {
+  final precentage = ((info.step / info.stepsCount) * 100).toInt();
+  logger.info('✅Done ${info.stepName} in ${info.msSpent} ms. ~~ '
+      'Progress: $precentage%');
 }
 
-class _SpeedometerState extends State<Speedometer> {
-  List<double>? _accelerometerValues;
-  final _streamSubscriptions = <StreamSubscription<dynamic>>[];
+void _onInitialized(InitializationResult result) {
+  logger
+      .info('[🚀App Initialization🚀]: ✅ Initialization completed successfully'
+          'in ${result.msSpent} ms.');
+}
 
-  @override
-  void initState() {
-    super.initState();
-    _streamSubscriptions.add(
-      accelerometerEvents.listen(
-        (AccelerometerEvent event) {
-          setState(
-            () {
-              _accelerometerValues = <double>[event.x, event.y, event.z];
-            },
-          );
-        },
-      ),
-    );
-  }
+void _onError(int step, Object error) {
+  logger.error(
+      '[🚀App Initialization🚀]: 💢 Initialization failed at step $step with error:'
+      '$error');
+}
 
-  @override
-  Widget build(BuildContext context) {
-    final speed = _accelerometerValues?.last;
-    return Center(
-      child: Row(
-        children: [
-          Text(
-            '${speed}km/h',
-            style: TextStyle(color: Colors.white, fontSize: 10),
-          ),
-        ],
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    for (final subscription in _streamSubscriptions) {
-      subscription.cancel();
-    }
-  }
+void _onInit() {
+  logger.info('[🚀App Initialization🚀]: 🚀 Initializing app...');
 }

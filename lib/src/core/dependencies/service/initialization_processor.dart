@@ -5,6 +5,7 @@ import 'package:speedometer/src/core/dependencies/data/initialization_info.dart'
 import 'package:speedometer/src/core/dependencies/data/initialization_progress.dart';
 import 'package:speedometer/src/core/dependencies/data/initialization_result.dart';
 import 'package:speedometer/src/core/dependencies/service/initialization_steps.dart';
+import 'package:speedometer/src/core/tracking/data/tracking_manager.dart';
 
 part 'initialization_factory.dart';
 
