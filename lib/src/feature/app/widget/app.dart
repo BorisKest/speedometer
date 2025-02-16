@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:speedometer/src/core/dependencies/data/initialization_result.dart';
 import 'package:speedometer/src/core/dependencies/widget/inherited_dependencies.dart';
+import 'package:speedometer/src/feature/speedometer/widget/speedometer_screen.dart';
 
 /// {@template app}
 /// App widget.
@@ -64,5 +66,11 @@ class _AppState extends State<App> {
   /* #endregion */
 
   @override
-  Widget build(BuildContext context) => const Placeholder();
+  Widget build(BuildContext context) => MaterialApp(
+        title: 'Speedometer',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const SpeedometerWidget(),
+      );
 }

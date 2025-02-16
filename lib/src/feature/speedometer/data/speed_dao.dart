@@ -1,12 +1,12 @@
 import 'package:geolocator/geolocator.dart';
 
-abstract class SpeedDao {
+abstract class SpeedometerDao {
   Stream<double> watch();
 
   Future<T> get<T>();
 }
 
-class ISpeedDao implements SpeedDao {
+class ISpeedometerDao implements SpeedometerDao {
   final GeolocatorPlatform _geolocator = GeolocatorPlatform.instance;
 
   @override
