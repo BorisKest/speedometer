@@ -2,8 +2,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:speedometer/src/feature/permitions/data/permitions_dao.dart';
 
 abstract class PermitionsRepository {
-  Future<bool> getPermitions();
-  Future<LocationPermission> requestPermitions();
+  Future<bool> requestPermitions();
 }
 
 class IPermitionsRepository implements PermitionsRepository {
@@ -12,12 +11,11 @@ class IPermitionsRepository implements PermitionsRepository {
   final PermitionsDao _permitionsDao;
 
   @override
-  Future<bool> getPermitions() async {
-    return await _permitionsDao.getPermitions();
-  }
-
-  @override
-  Future<LocationPermission> requestPermitions() async {
-    return await _permitionsDao.requestPermitions();
+  Future<bool> requestPermitions() async {
+    final locationPermission = await _permitionsDao.requestPermitions();
+    return locationPermission == LocationPermission.always ||
+            locationPermission == LocationPermission.whileInUse
+        ? true
+        : false;
   }
 }

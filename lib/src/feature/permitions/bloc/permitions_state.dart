@@ -5,17 +5,14 @@ class PermitionsState with _$PermitionsState {
   const PermitionsState._();
   const factory PermitionsState.initial({
     required bool location,
-    required bool storage,
   }) = _Idle;
 
   const factory PermitionsState.loading({
     required bool location,
-    required bool storage,
   }) = _Loading;
 
   const factory PermitionsState.error({
     required bool location,
-    required bool storage,
   }) = _Error;
 
   bool get isError => maybeMap(

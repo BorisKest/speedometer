@@ -18,21 +18,18 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PermitionsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPermitions,
     required TResult Function() requestPermitions,
     required TResult Function(bool location, bool storage) permitionsChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPermitions,
     TResult? Function()? requestPermitions,
     TResult? Function(bool location, bool storage)? permitionsChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPermitions,
     TResult Function()? requestPermitions,
     TResult Function(bool location, bool storage)? permitionsChanged,
     required TResult orElse(),
@@ -40,21 +37,18 @@ mixin _$PermitionsEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPermitions value) getPermitions,
     required TResult Function(_RequestPermitions value) requestPermitions,
     required TResult Function(_PermitionsChanged value) permitionsChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPermitions value)? getPermitions,
     TResult? Function(_RequestPermitions value)? requestPermitions,
     TResult? Function(_PermitionsChanged value)? permitionsChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPermitions value)? getPermitions,
     TResult Function(_RequestPermitions value)? requestPermitions,
     TResult Function(_PermitionsChanged value)? permitionsChanged,
     required TResult orElse(),
@@ -81,117 +75,6 @@ class _$PermitionsEventCopyWithImpl<$Res, $Val extends PermitionsEvent>
 
   /// Create a copy of PermitionsEvent
   /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-abstract class _$$GetPermitionsImplCopyWith<$Res> {
-  factory _$$GetPermitionsImplCopyWith(
-          _$GetPermitionsImpl value, $Res Function(_$GetPermitionsImpl) then) =
-      __$$GetPermitionsImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$GetPermitionsImplCopyWithImpl<$Res>
-    extends _$PermitionsEventCopyWithImpl<$Res, _$GetPermitionsImpl>
-    implements _$$GetPermitionsImplCopyWith<$Res> {
-  __$$GetPermitionsImplCopyWithImpl(
-      _$GetPermitionsImpl _value, $Res Function(_$GetPermitionsImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PermitionsEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$GetPermitionsImpl implements _GetPermitions {
-  const _$GetPermitionsImpl();
-
-  @override
-  String toString() {
-    return 'PermitionsEvent.getPermitions()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetPermitionsImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() getPermitions,
-    required TResult Function() requestPermitions,
-    required TResult Function(bool location, bool storage) permitionsChanged,
-  }) {
-    return getPermitions();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPermitions,
-    TResult? Function()? requestPermitions,
-    TResult? Function(bool location, bool storage)? permitionsChanged,
-  }) {
-    return getPermitions?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPermitions,
-    TResult Function()? requestPermitions,
-    TResult Function(bool location, bool storage)? permitionsChanged,
-    required TResult orElse(),
-  }) {
-    if (getPermitions != null) {
-      return getPermitions();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_GetPermitions value) getPermitions,
-    required TResult Function(_RequestPermitions value) requestPermitions,
-    required TResult Function(_PermitionsChanged value) permitionsChanged,
-  }) {
-    return getPermitions(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPermitions value)? getPermitions,
-    TResult? Function(_RequestPermitions value)? requestPermitions,
-    TResult? Function(_PermitionsChanged value)? permitionsChanged,
-  }) {
-    return getPermitions?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPermitions value)? getPermitions,
-    TResult Function(_RequestPermitions value)? requestPermitions,
-    TResult Function(_PermitionsChanged value)? permitionsChanged,
-    required TResult orElse(),
-  }) {
-    if (getPermitions != null) {
-      return getPermitions(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _GetPermitions implements PermitionsEvent {
-  const factory _GetPermitions() = _$GetPermitionsImpl;
 }
 
 /// @nodoc
@@ -235,7 +118,6 @@ class _$RequestPermitionsImpl implements _RequestPermitions {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPermitions,
     required TResult Function() requestPermitions,
     required TResult Function(bool location, bool storage) permitionsChanged,
   }) {
@@ -245,7 +127,6 @@ class _$RequestPermitionsImpl implements _RequestPermitions {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPermitions,
     TResult? Function()? requestPermitions,
     TResult? Function(bool location, bool storage)? permitionsChanged,
   }) {
@@ -255,7 +136,6 @@ class _$RequestPermitionsImpl implements _RequestPermitions {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPermitions,
     TResult Function()? requestPermitions,
     TResult Function(bool location, bool storage)? permitionsChanged,
     required TResult orElse(),
@@ -269,7 +149,6 @@ class _$RequestPermitionsImpl implements _RequestPermitions {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPermitions value) getPermitions,
     required TResult Function(_RequestPermitions value) requestPermitions,
     required TResult Function(_PermitionsChanged value) permitionsChanged,
   }) {
@@ -279,7 +158,6 @@ class _$RequestPermitionsImpl implements _RequestPermitions {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPermitions value)? getPermitions,
     TResult? Function(_RequestPermitions value)? requestPermitions,
     TResult? Function(_PermitionsChanged value)? permitionsChanged,
   }) {
@@ -289,7 +167,6 @@ class _$RequestPermitionsImpl implements _RequestPermitions {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPermitions value)? getPermitions,
     TResult Function(_RequestPermitions value)? requestPermitions,
     TResult Function(_PermitionsChanged value)? permitionsChanged,
     required TResult orElse(),
@@ -384,7 +261,6 @@ class _$PermitionsChangedImpl implements _PermitionsChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getPermitions,
     required TResult Function() requestPermitions,
     required TResult Function(bool location, bool storage) permitionsChanged,
   }) {
@@ -394,7 +270,6 @@ class _$PermitionsChangedImpl implements _PermitionsChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getPermitions,
     TResult? Function()? requestPermitions,
     TResult? Function(bool location, bool storage)? permitionsChanged,
   }) {
@@ -404,7 +279,6 @@ class _$PermitionsChangedImpl implements _PermitionsChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getPermitions,
     TResult Function()? requestPermitions,
     TResult Function(bool location, bool storage)? permitionsChanged,
     required TResult orElse(),
@@ -418,7 +292,6 @@ class _$PermitionsChangedImpl implements _PermitionsChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetPermitions value) getPermitions,
     required TResult Function(_RequestPermitions value) requestPermitions,
     required TResult Function(_PermitionsChanged value) permitionsChanged,
   }) {
@@ -428,7 +301,6 @@ class _$PermitionsChangedImpl implements _PermitionsChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetPermitions value)? getPermitions,
     TResult? Function(_RequestPermitions value)? requestPermitions,
     TResult? Function(_PermitionsChanged value)? permitionsChanged,
   }) {
@@ -438,7 +310,6 @@ class _$PermitionsChangedImpl implements _PermitionsChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetPermitions value)? getPermitions,
     TResult Function(_RequestPermitions value)? requestPermitions,
     TResult Function(_PermitionsChanged value)? permitionsChanged,
     required TResult orElse(),
@@ -468,26 +339,25 @@ abstract class _PermitionsChanged implements PermitionsEvent {
 /// @nodoc
 mixin _$PermitionsState {
   bool get location => throw _privateConstructorUsedError;
-  bool get storage => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool location, bool storage) initial,
-    required TResult Function(bool location, bool storage) loading,
-    required TResult Function(bool location, bool storage) error,
+    required TResult Function(bool location) initial,
+    required TResult Function(bool location) loading,
+    required TResult Function(bool location) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool location, bool storage)? initial,
-    TResult? Function(bool location, bool storage)? loading,
-    TResult? Function(bool location, bool storage)? error,
+    TResult? Function(bool location)? initial,
+    TResult? Function(bool location)? loading,
+    TResult? Function(bool location)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool location, bool storage)? initial,
-    TResult Function(bool location, bool storage)? loading,
-    TResult Function(bool location, bool storage)? error,
+    TResult Function(bool location)? initial,
+    TResult Function(bool location)? loading,
+    TResult Function(bool location)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -527,7 +397,7 @@ abstract class $PermitionsStateCopyWith<$Res> {
           PermitionsState value, $Res Function(PermitionsState) then) =
       _$PermitionsStateCopyWithImpl<$Res, PermitionsState>;
   @useResult
-  $Res call({bool location, bool storage});
+  $Res call({bool location});
 }
 
 /// @nodoc
@@ -546,16 +416,11 @@ class _$PermitionsStateCopyWithImpl<$Res, $Val extends PermitionsState>
   @override
   $Res call({
     Object? location = null,
-    Object? storage = null,
   }) {
     return _then(_value.copyWith(
       location: null == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storage: null == storage
-          ? _value.storage
-          : storage // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -569,7 +434,7 @@ abstract class _$$IdleImplCopyWith<$Res>
       __$$IdleImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool location, bool storage});
+  $Res call({bool location});
 }
 
 /// @nodoc
@@ -585,16 +450,11 @@ class __$$IdleImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? location = null,
-    Object? storage = null,
   }) {
     return _then(_$IdleImpl(
       location: null == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storage: null == storage
-          ? _value.storage
-          : storage // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -603,16 +463,14 @@ class __$$IdleImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$IdleImpl extends _Idle {
-  const _$IdleImpl({required this.location, required this.storage}) : super._();
+  const _$IdleImpl({required this.location}) : super._();
 
   @override
   final bool location;
-  @override
-  final bool storage;
 
   @override
   String toString() {
-    return 'PermitionsState.initial(location: $location, storage: $storage)';
+    return 'PermitionsState.initial(location: $location)';
   }
 
   @override
@@ -621,12 +479,11 @@ class _$IdleImpl extends _Idle {
         (other.runtimeType == runtimeType &&
             other is _$IdleImpl &&
             (identical(other.location, location) ||
-                other.location == location) &&
-            (identical(other.storage, storage) || other.storage == storage));
+                other.location == location));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, location, storage);
+  int get hashCode => Object.hash(runtimeType, location);
 
   /// Create a copy of PermitionsState
   /// with the given fields replaced by the non-null parameter values.
@@ -639,33 +496,33 @@ class _$IdleImpl extends _Idle {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool location, bool storage) initial,
-    required TResult Function(bool location, bool storage) loading,
-    required TResult Function(bool location, bool storage) error,
+    required TResult Function(bool location) initial,
+    required TResult Function(bool location) loading,
+    required TResult Function(bool location) error,
   }) {
-    return initial(location, storage);
+    return initial(location);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool location, bool storage)? initial,
-    TResult? Function(bool location, bool storage)? loading,
-    TResult? Function(bool location, bool storage)? error,
+    TResult? Function(bool location)? initial,
+    TResult? Function(bool location)? loading,
+    TResult? Function(bool location)? error,
   }) {
-    return initial?.call(location, storage);
+    return initial?.call(location);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool location, bool storage)? initial,
-    TResult Function(bool location, bool storage)? loading,
-    TResult Function(bool location, bool storage)? error,
+    TResult Function(bool location)? initial,
+    TResult Function(bool location)? loading,
+    TResult Function(bool location)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(location, storage);
+      return initial(location);
     }
     return orElse();
   }
@@ -706,14 +563,11 @@ class _$IdleImpl extends _Idle {
 }
 
 abstract class _Idle extends PermitionsState {
-  const factory _Idle(
-      {required final bool location, required final bool storage}) = _$IdleImpl;
+  const factory _Idle({required final bool location}) = _$IdleImpl;
   const _Idle._() : super._();
 
   @override
   bool get location;
-  @override
-  bool get storage;
 
   /// Create a copy of PermitionsState
   /// with the given fields replaced by the non-null parameter values.
@@ -731,7 +585,7 @@ abstract class _$$LoadingImplCopyWith<$Res>
       __$$LoadingImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool location, bool storage});
+  $Res call({bool location});
 }
 
 /// @nodoc
@@ -748,16 +602,11 @@ class __$$LoadingImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? location = null,
-    Object? storage = null,
   }) {
     return _then(_$LoadingImpl(
       location: null == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storage: null == storage
-          ? _value.storage
-          : storage // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -766,17 +615,14 @@ class __$$LoadingImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadingImpl extends _Loading {
-  const _$LoadingImpl({required this.location, required this.storage})
-      : super._();
+  const _$LoadingImpl({required this.location}) : super._();
 
   @override
   final bool location;
-  @override
-  final bool storage;
 
   @override
   String toString() {
-    return 'PermitionsState.loading(location: $location, storage: $storage)';
+    return 'PermitionsState.loading(location: $location)';
   }
 
   @override
@@ -785,12 +631,11 @@ class _$LoadingImpl extends _Loading {
         (other.runtimeType == runtimeType &&
             other is _$LoadingImpl &&
             (identical(other.location, location) ||
-                other.location == location) &&
-            (identical(other.storage, storage) || other.storage == storage));
+                other.location == location));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, location, storage);
+  int get hashCode => Object.hash(runtimeType, location);
 
   /// Create a copy of PermitionsState
   /// with the given fields replaced by the non-null parameter values.
@@ -803,33 +648,33 @@ class _$LoadingImpl extends _Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool location, bool storage) initial,
-    required TResult Function(bool location, bool storage) loading,
-    required TResult Function(bool location, bool storage) error,
+    required TResult Function(bool location) initial,
+    required TResult Function(bool location) loading,
+    required TResult Function(bool location) error,
   }) {
-    return loading(location, storage);
+    return loading(location);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool location, bool storage)? initial,
-    TResult? Function(bool location, bool storage)? loading,
-    TResult? Function(bool location, bool storage)? error,
+    TResult? Function(bool location)? initial,
+    TResult? Function(bool location)? loading,
+    TResult? Function(bool location)? error,
   }) {
-    return loading?.call(location, storage);
+    return loading?.call(location);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool location, bool storage)? initial,
-    TResult Function(bool location, bool storage)? loading,
-    TResult Function(bool location, bool storage)? error,
+    TResult Function(bool location)? initial,
+    TResult Function(bool location)? loading,
+    TResult Function(bool location)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
-      return loading(location, storage);
+      return loading(location);
     }
     return orElse();
   }
@@ -870,15 +715,11 @@ class _$LoadingImpl extends _Loading {
 }
 
 abstract class _Loading extends PermitionsState {
-  const factory _Loading(
-      {required final bool location,
-      required final bool storage}) = _$LoadingImpl;
+  const factory _Loading({required final bool location}) = _$LoadingImpl;
   const _Loading._() : super._();
 
   @override
   bool get location;
-  @override
-  bool get storage;
 
   /// Create a copy of PermitionsState
   /// with the given fields replaced by the non-null parameter values.
@@ -896,7 +737,7 @@ abstract class _$$ErrorImplCopyWith<$Res>
       __$$ErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool location, bool storage});
+  $Res call({bool location});
 }
 
 /// @nodoc
@@ -913,16 +754,11 @@ class __$$ErrorImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? location = null,
-    Object? storage = null,
   }) {
     return _then(_$ErrorImpl(
       location: null == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storage: null == storage
-          ? _value.storage
-          : storage // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -931,17 +767,14 @@ class __$$ErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ErrorImpl extends _Error {
-  const _$ErrorImpl({required this.location, required this.storage})
-      : super._();
+  const _$ErrorImpl({required this.location}) : super._();
 
   @override
   final bool location;
-  @override
-  final bool storage;
 
   @override
   String toString() {
-    return 'PermitionsState.error(location: $location, storage: $storage)';
+    return 'PermitionsState.error(location: $location)';
   }
 
   @override
@@ -950,12 +783,11 @@ class _$ErrorImpl extends _Error {
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
             (identical(other.location, location) ||
-                other.location == location) &&
-            (identical(other.storage, storage) || other.storage == storage));
+                other.location == location));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, location, storage);
+  int get hashCode => Object.hash(runtimeType, location);
 
   /// Create a copy of PermitionsState
   /// with the given fields replaced by the non-null parameter values.
@@ -968,33 +800,33 @@ class _$ErrorImpl extends _Error {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool location, bool storage) initial,
-    required TResult Function(bool location, bool storage) loading,
-    required TResult Function(bool location, bool storage) error,
+    required TResult Function(bool location) initial,
+    required TResult Function(bool location) loading,
+    required TResult Function(bool location) error,
   }) {
-    return error(location, storage);
+    return error(location);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool location, bool storage)? initial,
-    TResult? Function(bool location, bool storage)? loading,
-    TResult? Function(bool location, bool storage)? error,
+    TResult? Function(bool location)? initial,
+    TResult? Function(bool location)? loading,
+    TResult? Function(bool location)? error,
   }) {
-    return error?.call(location, storage);
+    return error?.call(location);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool location, bool storage)? initial,
-    TResult Function(bool location, bool storage)? loading,
-    TResult Function(bool location, bool storage)? error,
+    TResult Function(bool location)? initial,
+    TResult Function(bool location)? loading,
+    TResult Function(bool location)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(location, storage);
+      return error(location);
     }
     return orElse();
   }
@@ -1035,15 +867,11 @@ class _$ErrorImpl extends _Error {
 }
 
 abstract class _Error extends PermitionsState {
-  const factory _Error(
-      {required final bool location,
-      required final bool storage}) = _$ErrorImpl;
+  const factory _Error({required final bool location}) = _$ErrorImpl;
   const _Error._() : super._();
 
   @override
   bool get location;
-  @override
-  bool get storage;
 
   /// Create a copy of PermitionsState
   /// with the given fields replaced by the non-null parameter values.
